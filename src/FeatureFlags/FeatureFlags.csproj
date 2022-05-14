@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Feature Flags</Title>
+        <Authors>MED ZIANE</Authors>
+        <Company>MED ZIANE</Company>
+        <Product>Feature Flags</Product>
+        <RootNamespace>Med.FeatureFlags</RootNamespace>
+        <PackageId>Med.FeatureFlags</PackageId>
+        <Description>A .NET 6 library offering simple ways of creating and using feature flags.</Description>
+        <Copyright>Copyright (c) MED ZIANE 2022</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/medziane/FeatureFlags</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/medziane/FeatureFlags</RepositoryUrl>
+        <PackageTags>feature, flag, toggle, enabled, disabled, functionality</PackageTags>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DocumentationFile>bin\Debug\net6.0\FeatureFlags.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\net6.0\FeatureFlags.xml</DocumentationFile>
+    </PropertyGroup>
+
+</Project>

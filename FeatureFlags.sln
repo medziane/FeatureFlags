@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureFlags", "src\FeatureFlags\FeatureFlags.csproj", "{90C72EB1-781D-4CE5-B133-0AF1655CB76C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureFlags.UnitTests", "tests\FeatureFlags.UnitTests\FeatureFlags.UnitTests.csproj", "{58934B10-AA61-4C77-8814-2CC06B1AB728}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90C72EB1-781D-4CE5-B133-0AF1655CB76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90C72EB1-781D-4CE5-B133-0AF1655CB76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90C72EB1-781D-4CE5-B133-0AF1655CB76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90C72EB1-781D-4CE5-B133-0AF1655CB76C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58934B10-AA61-4C77-8814-2CC06B1AB728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58934B10-AA61-4C77-8814-2CC06B1AB728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58934B10-AA61-4C77-8814-2CC06B1AB728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58934B10-AA61-4C77-8814-2CC06B1AB728}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
