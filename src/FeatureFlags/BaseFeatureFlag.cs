@@ -16,7 +16,7 @@ public abstract class BaseFeatureFlag :
     private bool _enabled;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BaseFeatureFlag" /> class.
+    /// Creates a new instance of the <see cref="BaseFeatureFlag" /> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     protected BaseFeatureFlag(string id)

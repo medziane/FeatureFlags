@@ -7,7 +7,7 @@ public class EnabledPriorToVersionFeatureFlag :
     FeatureFlag
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="EnabledPriorToVersionFeatureFlag"/> class.
+    /// Creates a new instance of the <see cref="EnabledPriorToVersionFeatureFlag"/> class.
     /// </summary>
     /// <param name="cutoffVersion">The minimum version from which this feature flag is disabled.</param>
     /// <param name="fallbackEnabled">The fallback state of this feature flag if the assembly version is unattainable.</param>
@@ -17,7 +17,7 @@ public class EnabledPriorToVersionFeatureFlag :
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="EnabledPriorToVersionFeatureFlag"/> class.
+    /// Creates a new instance of the <see cref="EnabledPriorToVersionFeatureFlag"/> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     /// <param name="startVersion">The minimum version from which this feature flag is disabled.</param>

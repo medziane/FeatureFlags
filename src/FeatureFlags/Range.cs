@@ -7,7 +7,7 @@ public class Range<T> :
     where T : IComparable<T>
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="Range{T}" /> class.
+    /// Creates a new instance of the <see cref="Range{T}" /> class.
     /// </summary>
     /// <param name="minimum">The lowest value of this range.</param>
     /// <param name="maximum">The highest value of this range.</param>

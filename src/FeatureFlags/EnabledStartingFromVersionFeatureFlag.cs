@@ -7,7 +7,7 @@ public class EnabledStartingFromVersionFeatureFlag :
     FeatureFlag
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="EnabledStartingFromVersionFeatureFlag"/> class.
+    /// Creates a new instance of the <see cref="EnabledStartingFromVersionFeatureFlag"/> class.
     /// </summary>
     /// <param name="startVersion">The minimum version from which this feature flag is enabled.</param>
     /// <param name="fallbackEnabled">The fallback state of this feature flag if the assembly version is unattainable.</param>
@@ -17,7 +17,7 @@ public class EnabledStartingFromVersionFeatureFlag :
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="EnabledStartingFromVersionFeatureFlag"/> class.
+    /// Creates a new instance of the <see cref="EnabledStartingFromVersionFeatureFlag"/> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     /// <param name="startVersion">The minimum version from which this feature flag is enabled.</param>

@@ -7,7 +7,7 @@ public class EnabledWhenAllDisabledFeatureFlag :
     FeatureFlag
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="EnabledWhenAllDisabledFeatureFlag"/> class.
+    /// Creates a new instance of the <see cref="EnabledWhenAllDisabledFeatureFlag"/> class.
     /// </summary>
     /// <param name="featureFlags">A set of feature flags.</param>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="featureFlags"/> is <c>null</c>.</exception>
@@ -21,7 +21,7 @@ public class EnabledWhenAllDisabledFeatureFlag :
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="EnabledWhenAllDisabledFeatureFlag"/> class.
+    /// Creates a new instance of the <see cref="EnabledWhenAllDisabledFeatureFlag"/> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     /// <param name="featureFlags">A set of feature flags.</param>
