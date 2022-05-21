@@ -4,7 +4,6 @@
 ///     Represents a toggle that can be enabled or disabled.
 /// </summary>
 /// <seealso cref="IIdentifiable{TIdentity}" />
-
 public interface IFeatureFlag :
     IIdentifiable<string>
 {
@@ -14,7 +13,7 @@ public interface IFeatureFlag :
     bool Enabled { get; }
 
     /// <summary>
-    ///     Notifies clients that the <see cref="Enabled"/> property value has changed.
+    ///     Notifies clients that the <see cref="Enabled" /> property value has changed.
     /// </summary>
     event EventHandler<bool> EnabledChanged;
 }

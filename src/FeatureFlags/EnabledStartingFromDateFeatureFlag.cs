@@ -1,13 +1,13 @@
 namespace Med.FeatureFlags;
 
 /// <summary>
-/// A feature flag that is enabled starting from a given date.
+///     A feature flag that is enabled starting from a given date.
 /// </summary>
 public class EnabledStartingFromDateFeatureFlag :
     FeatureFlag
 {
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag" /> class.
     /// </summary>
     /// <param name="startDate">The day on which the feature flag becomes enabled.</param>
     public EnabledStartingFromDateFeatureFlag(DateOnly startDate)
@@ -17,7 +17,7 @@ public class EnabledStartingFromDateFeatureFlag :
     }
 
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag" /> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     /// <param name="startDate">The day on which the feature flag becomes enabled.</param>
@@ -28,7 +28,7 @@ public class EnabledStartingFromDateFeatureFlag :
     }
 
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag" /> class.
     /// </summary>
     /// <param name="startTime">The point in time in which the feature flag becomes enabled.</param>
     public EnabledStartingFromDateFeatureFlag(DateTime startTime)
@@ -38,7 +38,7 @@ public class EnabledStartingFromDateFeatureFlag :
     }
 
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag" /> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     /// <param name="startTime">The point in time in which the feature flag becomes enabled.</param>
@@ -49,7 +49,7 @@ public class EnabledStartingFromDateFeatureFlag :
     }
 
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag" /> class.
     /// </summary>
     /// <param name="startTime">The point in time in which the feature flag becomes enabled.</param>
     public EnabledStartingFromDateFeatureFlag(DateTimeOffset startTime)
@@ -59,7 +59,7 @@ public class EnabledStartingFromDateFeatureFlag :
     }
 
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledStartingFromDateFeatureFlag" /> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     /// <param name="startTime">The point in time in which the feature flag becomes enabled.</param>
@@ -70,27 +70,27 @@ public class EnabledStartingFromDateFeatureFlag :
     }
 
     /// <summary>
-    /// Evaluates whether or not this feature flag is enabled.
+    ///     Evaluates whether or not this feature flag is enabled.
     /// </summary>
     /// <param name="startDate">The day on which the feature flag becomes enabled.</param>
-    /// <returns><c>true</c> if the <paramref name="startDate"/> is in the past. Otherwise, <c>false</c>.</returns>
+    /// <returns><c>true</c> if the <paramref name="startDate" /> is in the past. Otherwise, <c>false</c>.</returns>
     protected static bool EvaluateEnabled(DateOnly startDate)
     {
         return startDate <= DateOnly.FromDateTime(DateTime.Now);
     }
 
     /// <summary>
-    /// Evaluates whether or not this feature flag is enabled.
+    ///     Evaluates whether or not this feature flag is enabled.
     /// </summary>
     /// <param name="startTime">The point in time in which the feature flag becomes enabled.</param>
-    /// <returns><c>true</c> if the <paramref name="startTime"/> is in the past. Otherwise, <c>false</c>.</returns>
+    /// <returns><c>true</c> if the <paramref name="startTime" /> is in the past. Otherwise, <c>false</c>.</returns>
     protected static bool EvaluateEnabled(DateTimeOffset startTime)
     {
         return startTime <= DateTimeOffset.Now;
     }
 
     /// <summary>
-    /// Evaluates whether or not this feature flag is enabled and schedules the next check.
+    ///     Evaluates whether or not this feature flag is enabled and schedules the next check.
     /// </summary>
     /// <param name="startTime">The point in time in which the feature flag becomes enabled.</param>
     /// <param name="cancellationToken">A component for notification that operations should be canceled.</param>

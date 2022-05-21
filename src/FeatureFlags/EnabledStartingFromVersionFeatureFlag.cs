@@ -1,13 +1,13 @@
 namespace Med.FeatureFlags;
 
 /// <summary>
-/// A feature flag that is enabled starting from a certain assembly version.
+///     A feature flag that is enabled starting from a certain assembly version.
 /// </summary>
 public class EnabledStartingFromVersionFeatureFlag :
     FeatureFlag
 {
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledStartingFromVersionFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledStartingFromVersionFeatureFlag" /> class.
     /// </summary>
     /// <param name="startVersion">The minimum version from which this feature flag is enabled.</param>
     /// <param name="fallbackEnabled">The fallback state of this feature flag if the assembly version is unattainable.</param>
@@ -17,7 +17,7 @@ public class EnabledStartingFromVersionFeatureFlag :
     }
 
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledStartingFromVersionFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledStartingFromVersionFeatureFlag" /> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     /// <param name="startVersion">The minimum version from which this feature flag is enabled.</param>
@@ -28,7 +28,7 @@ public class EnabledStartingFromVersionFeatureFlag :
     }
 
     /// <summary>
-    /// Evaluates whether or not this feature flag is enabled.
+    ///     Evaluates whether or not this feature flag is enabled.
     /// </summary>
     /// <param name="startVersion">The minimum version from which this feature flag is enabled.</param>
     /// <param name="fallbackEnabled">The fallback state of this feature flag if the assembly version is unattainable.</param>

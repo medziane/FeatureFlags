@@ -1,7 +1,7 @@
 namespace Med.FeatureFlags;
 
 /// <summary>
-/// A base implementation of <see cref="IFeatureFlag" />.
+///     A base implementation of <see cref="IFeatureFlag" />.
 /// </summary>
 /// <seealso cref="IFeatureFlag" />
 /// <seealso cref="INotifyPropertyChanging" />
@@ -16,7 +16,7 @@ public abstract class BaseFeatureFlag :
     private bool _enabled;
 
     /// <summary>
-    /// Creates a new instance of the <see cref="BaseFeatureFlag" /> class.
+    ///     Creates a new instance of the <see cref="BaseFeatureFlag" /> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     protected BaseFeatureFlag(string id)
@@ -25,12 +25,12 @@ public abstract class BaseFeatureFlag :
     }
 
     /// <summary>
-    /// Gets the identifier for this feature flag instance.
+    ///     Gets the identifier for this feature flag instance.
     /// </summary>
     public virtual string Id { get; }
 
     /// <summary>
-    /// Gets of sets a value indicating whether this feature flag is enabled.
+    ///     Gets of sets a value indicating whether this feature flag is enabled.
     /// </summary>
     public bool Enabled
     {
@@ -42,9 +42,9 @@ public abstract class BaseFeatureFlag :
     public event EventHandler<bool> EnabledChanged;
 
     /// <summary>
-    ///    Raises the <see cref="EnabledChanged" /> event.
+    ///     Raises the <see cref="EnabledChanged" /> event.
     /// </summary>
-    /// <param name="enabled">The new value of the property <see cref="Enabled"/>.</param>
+    /// <param name="enabled">The new value of the property <see cref="Enabled" />.</param>
     protected virtual void OnEnabledChanged(bool enabled)
     {
         EnabledChanged?.Invoke(this, enabled);
@@ -177,7 +177,7 @@ public abstract class BaseFeatureFlag :
     }
 
     /// <summary>
-    /// Determines whether two specified <see cref="IFeatureFlag" /> objects are equal.
+    ///     Determines whether two specified <see cref="IFeatureFlag" /> objects are equal.
     /// </summary>
     /// <param name="left">The left operand of the equality operator.</param>
     /// <param name="right">The right operand of the equality operator.</param>
@@ -188,7 +188,7 @@ public abstract class BaseFeatureFlag :
     }
 
     /// <summary>
-    /// Determines whether two specified <see cref="IFeatureFlag" /> objects are unequal to one another.
+    ///     Determines whether two specified <see cref="IFeatureFlag" /> objects are unequal to one another.
     /// </summary>
     /// <param name="left">The left operand of the inequality operator.</param>
     /// <param name="right">The right operand of the inequality operator.</param>

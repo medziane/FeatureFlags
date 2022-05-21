@@ -7,15 +7,15 @@ public class Range<T> :
     where T : IComparable<T>
 {
     /// <summary>
-    /// Creates a new instance of the <see cref="Range{T}" /> class.
+    ///     Creates a new instance of the <see cref="Range{T}" /> class.
     /// </summary>
     /// <param name="minimum">The lowest value of this range.</param>
     /// <param name="maximum">The highest value of this range.</param>
     /// <exception cref="ArgumentNullException">
-    /// Thrown if the <paramref name="minimum" /> and/or <paramref name="maximum" /> are <c>null</c>.
+    ///     Thrown if the <paramref name="minimum" /> and/or <paramref name="maximum" /> are <c>null</c>.
     /// </exception>
     /// <exception cref="ArgumentException">
-    /// Thrown if the <paramref name="minimum" /> is strictly greater than the <paramref name="maximum" />.
+    ///     Thrown if the <paramref name="minimum" /> is strictly greater than the <paramref name="maximum" />.
     /// </exception>
     public Range(T minimum, T maximum)
     {

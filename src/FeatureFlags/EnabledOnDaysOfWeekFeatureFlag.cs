@@ -1,13 +1,13 @@
 namespace Med.FeatureFlags;
 
 /// <summary>
-/// A feature flag that is enabled on the specified days of the week.
+///     A feature flag that is enabled on the specified days of the week.
 /// </summary>
 public class EnabledOnDaysOfWeekFeatureFlag :
     FeatureFlag
 {
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledOnDaysOfWeekFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledOnDaysOfWeekFeatureFlag" /> class.
     /// </summary>
     /// <param name="daysOfWeek">The days of the week on which this feature flag is enabled.</param>
     public EnabledOnDaysOfWeekFeatureFlag(params DayOfWeek[] daysOfWeek)
@@ -17,7 +17,7 @@ public class EnabledOnDaysOfWeekFeatureFlag :
     }
 
     /// <summary>
-    /// Creates a new instance of the <see cref="EnabledOnDaysOfWeekFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="EnabledOnDaysOfWeekFeatureFlag" /> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     /// <param name="daysOfWeek">The days of the week on which this feature flag is enabled.</param>
@@ -28,7 +28,7 @@ public class EnabledOnDaysOfWeekFeatureFlag :
     }
 
     /// <summary>
-    /// Evaluates whether or not this feature flag is enabled.
+    ///     Evaluates whether or not this feature flag is enabled.
     /// </summary>
     /// <param name="daysOfWeek">The days of the week on which this feature flag is enabled.</param>
     /// <returns><c>true</c> if this feature flag is enabled today. Otherwise, <c>false</c>.</returns>
@@ -38,18 +38,18 @@ public class EnabledOnDaysOfWeekFeatureFlag :
     }
 
     /// <summary>
-    /// Evaluates whether or not this feature flag is enabled on the specified day of the week.
+    ///     Evaluates whether or not this feature flag is enabled on the specified day of the week.
     /// </summary>
     /// <param name="daysOfWeek">The days of the week on which this feature flag is enabled.</param>
     /// <param name="targetDay">The day being checked.</param>
-    /// <returns><c>true</c> if this feature flag is enabled on <paramref name="targetDay"/>. Otherwise, <c>false</c>.</returns>
+    /// <returns><c>true</c> if this feature flag is enabled on <paramref name="targetDay" />. Otherwise, <c>false</c>.</returns>
     protected static bool EvaluateEnabledOnCertainDay(IEnumerable<DayOfWeek> daysOfWeek, DayOfWeek targetDay)
     {
         return daysOfWeek.Contains(targetDay);
     }
 
     /// <summary>
-    /// Evaluates whether or not this feature flag is enabled and schedules the next check.
+    ///     Evaluates whether or not this feature flag is enabled and schedules the next check.
     /// </summary>
     /// <param name="daysOfWeek">The days of the week on which this feature flag is enabled.</param>
     /// <param name="cancellationToken">A component for notification that operations should be canceled.</param>
@@ -78,7 +78,7 @@ public class EnabledOnDaysOfWeekFeatureFlag :
     }
 
     /// <summary>
-    /// Determines the time until midnight, when the day change occurs.
+    ///     Determines the time until midnight, when the day change occurs.
     /// </summary>
     /// <returns>The time until midnight.</returns>
     protected virtual TimeSpan TimeUntilDayOfWeekChange()
@@ -89,7 +89,8 @@ public class EnabledOnDaysOfWeekFeatureFlag :
     }
 
     /// <summary>
-    /// Determines the time until the next day of the week, when the state of the feature flag will be different than today's.
+    ///     Determines the time until the next day of the week, when the state of the feature flag will be different than
+    ///     today's.
     /// </summary>
     /// <param name="daysOfWeek">The days of the week on which this feature flag is enabled.</param>
     /// <returns>The time until the next evaluation returns a different result than today.</returns>

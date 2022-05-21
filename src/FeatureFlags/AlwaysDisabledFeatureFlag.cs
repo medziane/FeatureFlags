@@ -1,13 +1,13 @@
 namespace Med.FeatureFlags;
 
 /// <summary>
-/// A feature flag that is always disabled.
+///     A feature flag that is always disabled.
 /// </summary>
 public class AlwaysDisabledFeatureFlag :
     FeatureFlag
 {
     /// <summary>
-    /// Creates a new instance of the <see cref="AlwaysDisabledFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="AlwaysDisabledFeatureFlag" /> class.
     /// </summary>
     public AlwaysDisabledFeatureFlag()
         : base(false)
@@ -15,7 +15,7 @@ public class AlwaysDisabledFeatureFlag :
     }
 
     /// <summary>
-    /// Creates a new instance of the <see cref="AlwaysDisabledFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="AlwaysDisabledFeatureFlag" /> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     public AlwaysDisabledFeatureFlag(string id)

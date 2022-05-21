@@ -1,13 +1,13 @@
 namespace Med.FeatureFlags;
 
 /// <summary>
-/// A feature flag that is enabled when the given feature flag is disabled, and vice versa.
+///     A feature flag that is enabled when the given feature flag is disabled, and vice versa.
 /// </summary>
 public class ReverseEnabledFeatureFlag :
     EnabledWhenAllDisabledFeatureFlag
 {
     /// <summary>
-    /// Creates a new instance of the <see cref="ReverseEnabledFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="ReverseEnabledFeatureFlag" /> class.
     /// </summary>
     /// <param name="featureFlag">The feature flag to be opposed by this one.</param>
     public ReverseEnabledFeatureFlag(IFeatureFlag featureFlag)
@@ -16,7 +16,7 @@ public class ReverseEnabledFeatureFlag :
     }
 
     /// <summary>
-    /// Creates a new instance of the <see cref="ReverseEnabledFeatureFlag"/> class.
+    ///     Creates a new instance of the <see cref="ReverseEnabledFeatureFlag" /> class.
     /// </summary>
     /// <param name="id">An identifier for this feature flag instance.</param>
     /// <param name="featureFlag">The feature flag to be opposed by this one.</param>

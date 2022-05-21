@@ -1,12 +1,12 @@
 namespace Med.FeatureFlags;
 
 /// <summary>
-/// A collection of extension methods for the <see cref="IRange{T}" /> interface.
+///     A collection of extension methods for the <see cref="IRange{T}" /> interface.
 /// </summary>
 public static class RangeExtensions
 {
     /// <summary>
-    /// Determines whether two ranges intersect with one another.
+    ///     Determines whether two ranges intersect with one another.
     /// </summary>
     /// <param name="range">The first range.</param>
     /// <param name="otherRange">The second range.</param>
@@ -25,7 +25,7 @@ public static class RangeExtensions
     }
 
     /// <summary>
-    /// Determines whether one range is contained within another range.
+    ///     Determines whether one range is contained within another range.
     /// </summary>
     /// <param name="range">The first range.</param>
     /// <param name="otherRange">The second range.</param>
@@ -44,7 +44,7 @@ public static class RangeExtensions
     }
 
     /// <summary>
-    /// Determines whether a value exists within a range.
+    ///     Determines whether a value exists within a range.
     /// </summary>
     /// <param name="range">The range.</param>
     /// <param name="element">The value to check.</param>
