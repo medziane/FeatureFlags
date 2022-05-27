@@ -45,9 +45,7 @@ public class FeatureFlag :
     public FeatureFlag(string id, Func<bool> predicate)
         : base(id)
     {
-        if (predicate is null)
-            throw new ArgumentNullException(nameof(predicate));
-
+        ArgumentNullException.ThrowIfNull(predicate, nameof(predicate));
         Enabled = predicate.Invoke();
     }
 }

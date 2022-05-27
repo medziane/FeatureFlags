@@ -19,11 +19,8 @@ public class Range<T> :
     /// </exception>
     public Range(T minimum, T maximum)
     {
-        if (minimum == null)
-            throw new ArgumentNullException(nameof(minimum));
-
-        if (maximum == null)
-            throw new ArgumentNullException(nameof(maximum));
+        ArgumentNullException.ThrowIfNull(minimum, nameof(minimum));
+        ArgumentNullException.ThrowIfNull(maximum, nameof(maximum));
 
         if (minimum.CompareTo(maximum) > 0)
             throw new ArgumentException(@"the maximum cannot be bigger than the minimum.", nameof(maximum));
