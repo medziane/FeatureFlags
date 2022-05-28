@@ -4,7 +4,8 @@
 ## Table of Contents
 1. [Features](#features)
 2. [Dependencies](#dependencies)
-4. [Ideas](#ideas)
+3. [Ideas](#ideas)
+4. [Changelog](#changelog)
 5. [Contributing](#contributing)
 6. [Authors](#authors)
 7. [License](#license)
@@ -23,7 +24,20 @@
 ## Ideas
 
 - Add an override possibility to enable or disable features
+- Enabled on day of the year
+- Enabled on day of the month
 - ...
+
+## Changelog
+
+### Version 1.0.0
+- Initial release
+  - Identifiable feature flags
+  - Over 20 flavors of feature flags
+  - Event-invoker state changes
+  - Automatically evaluated state
+  - Fully documented code
+  - Unit-tested code
 
 ## Contributing
 
