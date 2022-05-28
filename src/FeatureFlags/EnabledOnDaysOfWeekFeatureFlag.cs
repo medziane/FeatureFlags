@@ -45,7 +45,7 @@ public class EnabledOnDaysOfWeekFeatureFlag :
     /// <returns><c>true</c> if this feature flag is enabled on <paramref name="targetDay" />. Otherwise, <c>false</c>.</returns>
     protected static bool EvaluateEnabledOnCertainDay(IEnumerable<DayOfWeek> daysOfWeek, DayOfWeek targetDay)
     {
-        return daysOfWeek.Contains(targetDay);
+        return daysOfWeek != null && daysOfWeek.Contains(targetDay);
     }
 
     /// <summary>
@@ -60,13 +60,13 @@ public class EnabledOnDaysOfWeekFeatureFlag :
     {
         Enabled = EvaluateEnabled(daysOfWeek);
 
-        if (daysOfWeek.Length == 0)
+        if (daysOfWeek == null || daysOfWeek.Length == 0)
             return Task.CompletedTask;
 
         try
         {
-            var timeUntilNextPredicate = TimeUntilEvaluationChange(daysOfWeek);
-            return Task.Delay(timeUntilNextPredicate, cancellationToken)
+            var timeUntilNextEvaluation = TimeUntilEvaluationChange(daysOfWeek);
+            return Task.Delay(timeUntilNextEvaluation, cancellationToken)
                 .ContinueWith(
                     _ => EvaluateEnabledAndScheduleNextCheck(daysOfWeek, cancellationToken),
                     cancellationToken);
