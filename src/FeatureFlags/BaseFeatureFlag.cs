@@ -6,11 +6,13 @@ namespace Med.FeatureFlags;
 /// <seealso cref="IFeatureFlag" />
 /// <seealso cref="INotifyPropertyChanging" />
 /// <seealso cref="INotifyPropertyChanged" />
+/// <seealso cref="INotifyDataErrorInfo" />
 /// <seealso cref="IDisposable" />
 public abstract class BaseFeatureFlag :
     IFeatureFlag,
     INotifyPropertyChanging,
     INotifyPropertyChanged,
+    INotifyDataErrorInfo,
     IDisposable
 {
     private bool _enabled;
@@ -113,6 +115,43 @@ public abstract class BaseFeatureFlag :
 
     /// <inheritdoc cref="INotifyPropertyChanged.PropertyChanged" />
     public event PropertyChangedEventHandler PropertyChanged;
+
+    #endregion
+
+    #region INotifyDataErrorInfo
+
+    private readonly Dictionary<string, List<ValidationResult>> _errors = new();
+
+    /// <inheritdoc cref="INotifyDataErrorInfo.GetErrors" />
+    protected virtual IEnumerable GetErrors(string propertyName)
+    {
+        if (string.IsNullOrEmpty(propertyName))
+            return _errors.Values.SelectMany(static x => x);
+
+        return _errors.TryGetValue(propertyName, out var results)
+            ? results
+            : Array.Empty<ValidationResult>();
+    }
+
+    IEnumerable INotifyDataErrorInfo.GetErrors(string propertyName)
+    {
+        return GetErrors(propertyName);
+    }
+
+    /// <inheritdoc cref="INotifyDataErrorInfo.HasErrors" />
+    public virtual bool HasErrors => _errors.Any();
+
+    /// <summary>
+    ///     Raises the event of having errors changed.
+    /// </summary>
+    /// <param name="args">Event arguments containing the name of the property that changed.</param>
+    protected virtual void OnErrorsChanged(DataErrorsChangedEventArgs args)
+    {
+        ErrorsChanged?.Invoke(this, args);
+    }
+
+    /// <inheritdoc cref="INotifyDataErrorInfo.ErrorsChanged" />
+    public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
 
     #endregion
 
