@@ -1,5 +1,5 @@
-# FeatureFlags
-[![Build & Test](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml/badge.svg)](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml)
+# 💫 Feature Flags
+[![Build, Test, and Deploy](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml/badge.svg)](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml)
 
 ## Table of Contents
 1. [Features](#features)
