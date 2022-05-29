@@ -1,5 +1,5 @@
 # <img src="./src/FeatureFlags/featureflags.png" alt="Feature Flags" width="24"/> Feature Flags
-[![Build, Test, and Deploy](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml/badge.svg)](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml)
+[![Build, Test, Pack and Deploy](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml/badge.svg)](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml)
 
 Feature Flags is a library that allows you to automatically enable or disable features in your application.
 
