@@ -18,6 +18,7 @@
         <RepositoryUrl>https://github.com/medziane/FeatureFlags</RepositoryUrl>
         <PackageTags>feature, flag, toggle, enabled, disabled, functionality</PackageTags>
         <PackageVersion>1.0.1</PackageVersion>
+        <PackageIcon>featureflags.png</PackageIcon>
     </PropertyGroup>
     
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -27,5 +28,12 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <DocumentationFile>bin\Release\net6.0\FeatureFlags.xml</DocumentationFile>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Update="featureflags.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
 
 </Project>

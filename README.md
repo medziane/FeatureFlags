@@ -1,4 +1,4 @@
-# 💫 Feature Flags
+# <img src="./src/FeatureFlags/featureflags.png" alt="Feature Flags" width="24"/> Feature Flags
 [![Build, Test, and Deploy](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml/badge.svg)](https://github.com/medziane/FeatureFlags/actions/workflows/cicd.yml)
 
 ## Table of Contents
@@ -31,6 +31,8 @@
 ## Changelog
 
 ### Version 1.0.1
+- Adding an icon to the nuget package
+
 ### Version 1.0.0
 _Initial release_
 - Identifiable feature flags
