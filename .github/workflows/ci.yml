@@ -1,9 +1,10 @@
-name: Build, Test, Pack and Deploy
+name: Build and Test
 
 on:
-  release:
-    types: [published]
-    
+  push:
+    branches:
+      - 'main'
+
 jobs:
   build:
 
@@ -27,9 +28,3 @@ jobs:
     
     - name: Test
       run: dotnet test -c Release --no-restore --no-build --verbosity normal --filter "Category!=LongRunning"
-
-    - name: Pack
-      run: dotnet pack src/FeatureFlags/FeatureFlags.csproj -c Release --no-restore --no-build --include-symbols -p:SymbolPackageFormat=snupkg -o .
-
-    - name: Push to NuGet
-      run: dotnet nuget push *.nupkg --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}}
