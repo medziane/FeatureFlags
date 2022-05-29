@@ -17,6 +17,7 @@
         <PackageProjectUrl>https://github.com/medziane/FeatureFlags</PackageProjectUrl>
         <RepositoryUrl>https://github.com/medziane/FeatureFlags</RepositoryUrl>
         <PackageTags>feature, flag, toggle, enabled, disabled, functionality</PackageTags>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
     
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

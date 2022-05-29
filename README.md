@@ -30,14 +30,15 @@
 
 ## Changelog
 
+### Version 1.0.1
 ### Version 1.0.0
-- Initial release
-  - Identifiable feature flags
-  - Over 20 flavors of feature flags
-  - Event-invoker state changes
-  - Automatically evaluated state
-  - Fully documented code
-  - Unit-tested code
+_Initial release_
+- Identifiable feature flags
+- Over 20 flavors of feature flags
+- Event-invoker state changes
+- Automatically evaluated state
+- Fully documented code
+- Unit-tested code
 
 ## Contributing
 
