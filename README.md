@@ -34,6 +34,7 @@ Feature Flags is a library that allows you to automatically enable or disable fe
 
 ### Version 1.0.1
 - Adding an icon to the nuget package
+- Killing bugs
 
 ### Version 1.0.0
 _Initial release_
@@ -53,6 +54,6 @@ We follow the [.NET Project Structure](https://gist.github.com/davidfowl/ed75642
 - [MED ZIANE](https://www.madmed.com)
 
 ## License
-Copyright © 2022, MED ZIANE
+Copyright © 2022, [MED ZIANE](https://www.madmed.com)
 
 FeatureFlags is provided "as is" under the MIT license. For more information see [LICENSE](LICENSE).
