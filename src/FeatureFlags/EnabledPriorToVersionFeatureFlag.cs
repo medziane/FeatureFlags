@@ -37,7 +37,7 @@ public class EnabledPriorToVersionFeatureFlag :
     {
         try
         {
-            var assemblyVersion = typeof(EnabledPriorToVersionFeatureFlag).Assembly.GetName().Version;
+            var assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version;
             return assemblyVersion < cutoffVersion;
         }
         catch (Exception)

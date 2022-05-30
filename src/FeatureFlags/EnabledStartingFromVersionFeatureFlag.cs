@@ -37,7 +37,7 @@ public class EnabledStartingFromVersionFeatureFlag :
     {
         try
         {
-            var assemblyVersion = typeof(EnabledStartingFromVersionFeatureFlag).Assembly.GetName().Version;
+            var assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version;
             return startVersion <= assemblyVersion;
         }
         catch (Exception)
