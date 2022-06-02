@@ -1,4 +1,4 @@
-namespace Med.FeatureFlags;
+namespace Med.FeatureFlags.Enablers;
 
 /// <summary>
 ///     A representation of a continuous set of values with a minimum and maximum value.

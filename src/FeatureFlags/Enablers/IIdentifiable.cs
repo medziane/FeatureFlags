@@ -1,4 +1,4 @@
-namespace Med.FeatureFlags;
+namespace Med.FeatureFlags.Enablers;
 
 /// <summary>
 ///     The API for components that are identifiable.

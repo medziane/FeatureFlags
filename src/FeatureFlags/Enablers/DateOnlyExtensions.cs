@@ -1,4 +1,4 @@
-namespace Med.FeatureFlags;
+namespace Med.FeatureFlags.Enablers;
 
 public static class DateOnlyExtensions
 {

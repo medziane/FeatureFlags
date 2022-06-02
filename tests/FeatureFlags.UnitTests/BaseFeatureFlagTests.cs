@@ -1,3 +1,5 @@
+using Med.FeatureFlags.Enablers;
+
 namespace Med.FeatureFlags.UnitTests;
 
 public class BaseFeatureFlagTests

@@ -1,4 +1,4 @@
-namespace Med.FeatureFlags;
+namespace Med.FeatureFlags.Enablers;
 
 /// <inheritdoc />
 /// <seealso cref="IComparable{T}" />

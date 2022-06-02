@@ -1,4 +1,4 @@
-namespace Med.FeatureFlags;
+namespace Med.FeatureFlags.Enablers;
 
 /// <summary>
 ///     A collection of extension methods for the <see cref="IRange{T}" /> interface.
