@@ -13,7 +13,7 @@ public class EnabledDuringDatePeriodFeatureFlag :
     public EnabledDuringDatePeriodFeatureFlag(IRange<DateOnly> datePeriod)
         : base(() => EvaluateEnabled(datePeriod))
     {
-        ArgumentNullException.ThrowIfNull(datePeriod, nameof(datePeriod));
+        ArgumentNullException.ThrowIfNull(datePeriod);
         EvaluateEnabledAndScheduleNextCheck(datePeriod, CancellationToken.None);
     }
 
@@ -25,7 +25,7 @@ public class EnabledDuringDatePeriodFeatureFlag :
     public EnabledDuringDatePeriodFeatureFlag(string id, IRange<DateOnly> datePeriod)
         : base(id, () => EvaluateEnabled(datePeriod))
     {
-        ArgumentNullException.ThrowIfNull(datePeriod, nameof(datePeriod));
+        ArgumentNullException.ThrowIfNull(datePeriod);
         EvaluateEnabledAndScheduleNextCheck(datePeriod, CancellationToken.None);
     }
 
@@ -36,7 +36,7 @@ public class EnabledDuringDatePeriodFeatureFlag :
     /// <returns><c>true</c> if this feature flag is enabled today. Otherwise, <c>false</c>.</returns>
     protected static bool EvaluateEnabled(IRange<DateOnly> datePeriod)
     {
-        ArgumentNullException.ThrowIfNull(datePeriod, nameof(datePeriod));
+        ArgumentNullException.ThrowIfNull(datePeriod);
         return datePeriod.Contains(DateOnly.FromDateTime(DateTime.Now));
     }
 
@@ -50,7 +50,7 @@ public class EnabledDuringDatePeriodFeatureFlag :
         IRange<DateOnly> datePeriod,
         CancellationToken cancellationToken)
     {
-        ArgumentNullException.ThrowIfNull(datePeriod, nameof(datePeriod));
+        ArgumentNullException.ThrowIfNull(datePeriod);
 
         var now = DateTime.Now;
         var today = DateOnly.FromDateTime(now);

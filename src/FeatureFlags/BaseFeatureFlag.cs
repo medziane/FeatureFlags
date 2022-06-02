@@ -23,7 +23,7 @@ public abstract class BaseFeatureFlag :
     /// <param name="id">An identifier for this feature flag instance.</param>
     protected BaseFeatureFlag(string id)
     {
-        ArgumentNullException.ThrowIfNull(id, nameof(id));
+        ArgumentNullException.ThrowIfNull(id);
 
         if (string.IsNullOrWhiteSpace(id))
             throw new ArgumentException("Value cannot be empty or whitespace only string.", nameof(id));

@@ -14,7 +14,8 @@ public class EnabledWhenAnyEnabledFeatureFlag :
     public EnabledWhenAnyEnabledFeatureFlag(params IFeatureFlag[] featureFlags)
         : base(() => EvaluateEnabled(featureFlags))
     {
-        FeatureFlags = featureFlags ?? throw new ArgumentNullException(nameof(featureFlags));
+        ArgumentNullException.ThrowIfNull(featureFlags);
+        FeatureFlags = featureFlags;
 
         foreach (var featureFlag in FeatureFlags)
             featureFlag.EnabledChanged += OnFeatureFlagEnabledChanged;
@@ -29,7 +30,8 @@ public class EnabledWhenAnyEnabledFeatureFlag :
     public EnabledWhenAnyEnabledFeatureFlag(string id, params IFeatureFlag[] featureFlags)
         : base(id, () => EvaluateEnabled(featureFlags))
     {
-        FeatureFlags = featureFlags ?? throw new ArgumentNullException(nameof(featureFlags));
+        ArgumentNullException.ThrowIfNull(featureFlags);
+        FeatureFlags = featureFlags;
 
         foreach (var featureFlag in FeatureFlags)
             featureFlag.EnabledChanged += OnFeatureFlagEnabledChanged;

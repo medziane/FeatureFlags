@@ -15,8 +15,8 @@ public static class RangeExtensions
     /// <exception cref="ArgumentNullException">Thrown if any of the ranges is <c>null</c>.</exception>
     public static bool Intersects<T>(this IRange<T> range, IRange<T> otherRange) where T : IComparable<T>
     {
-        ArgumentNullException.ThrowIfNull(range, nameof(range));
-        ArgumentNullException.ThrowIfNull(otherRange, nameof(otherRange));
+        ArgumentNullException.ThrowIfNull(range);
+        ArgumentNullException.ThrowIfNull(otherRange);
 
         return range.Minimum.CompareTo(otherRange.Maximum) < 0 && otherRange.Minimum.CompareTo(range.Maximum) < 0;
     }
@@ -31,8 +31,8 @@ public static class RangeExtensions
     /// <exception cref="ArgumentNullException">Thrown if any of the ranges is <c>null</c>.</exception>
     public static bool Contains<T>(this IRange<T> range, IRange<T> otherRange) where T : IComparable<T>
     {
-        ArgumentNullException.ThrowIfNull(range, nameof(range));
-        ArgumentNullException.ThrowIfNull(otherRange, nameof(otherRange));
+        ArgumentNullException.ThrowIfNull(range);
+        ArgumentNullException.ThrowIfNull(otherRange);
 
         return range.Minimum.CompareTo(otherRange.Minimum) <= 0 && otherRange.Maximum.CompareTo(range.Maximum) <= 0;
     }
@@ -47,8 +47,8 @@ public static class RangeExtensions
     /// <exception cref="ArgumentNullException">Thrown if any of the range and/or the element is <c>null</c>.</exception>
     public static bool Contains<T>(this IRange<T> range, T element) where T : IComparable<T>
     {
-        ArgumentNullException.ThrowIfNull(range, nameof(range));
-        ArgumentNullException.ThrowIfNull(element, nameof(element));
+        ArgumentNullException.ThrowIfNull(range);
+        ArgumentNullException.ThrowIfNull(element);
 
         return range.Minimum.CompareTo(element) <= 0 && element.CompareTo(range.Maximum) <= 0;
     }
