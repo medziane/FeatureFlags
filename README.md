@@ -52,8 +52,9 @@ We follow the [.NET Project Structure](https://gist.github.com/davidfowl/ed75642
 
 ## Authors
 - [MED ZIANE](https://www.madmed.com)
+- Your Name Here :)
 
 ## License
-Copyright © 2022, [MED ZIANE](https://www.madmed.com)
-
 FeatureFlags is provided "as is" under the MIT license. For more information see [LICENSE](LICENSE).
+
+Copyright © 2022, [MED ZIANE](https://www.madmed.com)
