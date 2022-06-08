@@ -28,6 +28,8 @@ Feature Flags is a library that allows you to automatically enable or disable fe
 - Add an override possibility to enable or disable features
 - Enabled on day of the year
 - Enabled on day of the month
+- Load feature flags from a file
+- Load feature flags from a URL
 - ...
 
 ## Changelog
