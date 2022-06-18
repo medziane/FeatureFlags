@@ -38,6 +38,7 @@ Feature Flags is a library that allows you to automatically enable or disable fe
 ### Version 1.0.1
 - Adding an icon to the nuget package
 - Introducing an interface to indicate an object is capable of being enabled of disable
+- Introducing a flag that enables a feature every day during the specified period of time
 - Killing bugs
 
 ### Version 1.0.0
