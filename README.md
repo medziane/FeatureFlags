@@ -36,7 +36,7 @@ Feature Flags is a library that allows you to automatically enable or disable fe
 ## Changelog
 
 ### Version 1.0.2
-- ...
+- Introduce samples to illustrate how the feature flags work
 
 ### Version 1.0.1
 - Adding an icon to the nuget package
